@@ -1,0 +1,27 @@
+<view class="userinfo" bind:tap="login">
+  <image src="{{isLogin ? userInfo.avatar : '../../assets/images/profile/avatar.png'}}" mode="widthFix" class="avatar" />
+  <view class="nikename">{{isLogin ? userInfo.nickName : '未登录'}}</view>
+</view>
+
+<view class="tabs">
+  <block wx:for="{{tabs}}" wx:key="type">
+    <image src="../../assets/images/profile/{{item.type}}.png" mode="widthFix" class="icon" bind:tap="onTabItemClick" data-index="{{index}}" />
+  </block>
+</view>
+
+<view class="mine-menu">
+  <area-header title="我的歌单" hasMore="{{false}}" />
+  <view class="new-menu">
+    <view>新建歌单</view>
+    <van-icon name="plus" bind:tap="onAddTap" />
+  </view>
+  <view class="menu-list">
+    <block wx:for="{{menuList}}" wx:key="name">
+      <menu-item-v2 menuItem="{{item}}"></menu-item-v2>
+    </block>
+  </view>
+</view>
+
+<van-dialog use-slot title="创建歌单" show="{{isShowDialog}}" show-cancel-button class="dialog" bind:close="onCloseDialog" bind:confirm="onConfirmDialog">
+  <input type="text" class="input" placeholder="请输入歌单" model:value="{{menuName}}" />
+</van-dialog>

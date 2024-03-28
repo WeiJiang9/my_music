@@ -1,0 +1,10 @@
+<view class="menu-item-wrap" bind:tap="onMenuItemTap">
+  <view class="menu-item">
+    <image src="{{menuItem.songList.length ? menuItem.songList[0].al.picUrl : 'https://th.bing.com/th/id/OIP.r5dSvfrZB_MyZYd0DqWdkwHaHa?w=181&h=181&c=7&r=0&o=5&pid=1.7'}}" mode="widthFix" class="img" />
+    <view class="info">
+      <view class="name">{{menuItem.name}}</view>
+      <view class="count">{{ menuItem.songList.length }} 首</view>
+    </view>
+  </view>
+  <van-icon name="delete-o" class="delete-icon" catch:tap="onDeleteMenuItem"></van-icon>
+</view>

@@ -1,0 +1,54 @@
+page {
+  padding: 30rpx;
+  background-color: #f3f3f3;
+  box-sizing: border-box;
+}
+
+.userinfo {
+  display: flex;
+  align-items: center;
+
+}
+
+.nikename {
+  font-size: 26rpx;
+  margin-left: 20rpx;
+}
+
+.avatar {
+  width: 100rpx;
+  border-radius: 50%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30rpx 0;
+}
+
+.tabs .icon {
+  width: 60rpx;
+}
+
+.new-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #555;
+  font-size: 28rpx;
+}
+
+.menu-list {
+  padding: 20rpx 10rpx;
+}
+
+
+
+.dialog .input {
+  border: 1px solid #999;
+  margin: 30rpx;
+  padding: 16rpx 30rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+}
